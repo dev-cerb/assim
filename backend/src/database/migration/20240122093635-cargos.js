@@ -2,9 +2,8 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('cargos', {
-      idCargo: {
+      idcargo: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
@@ -16,11 +15,11 @@ module.exports = {
         type: Sequelize.FLOAT,
         allowNull: false,
       },
-      create_at: {
+      created_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      updateAt: {
+      updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
@@ -29,7 +28,7 @@ module.exports = {
 
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('cargos', {
-      idCargo: {
+      idcargo: {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
@@ -43,11 +42,11 @@ module.exports = {
         type: Sequelize.FLOAT,
         allowNull: false,
       },
-      create_at: {
+      created_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      updateAt: {
+      updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },

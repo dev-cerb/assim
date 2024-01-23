@@ -24,7 +24,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
-    'class-methos-use-this': 'off',
+    'class-methos-use-this': off,
     'import/first': 'off',
     'import/no-extraneous-dependencies': ['error',
       {

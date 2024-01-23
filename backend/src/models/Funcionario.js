@@ -4,11 +4,11 @@ export default class Funcionario extends Model {
   static init(sequelize) {
     super.init({
       nome: Sequelize.STRING,
-      dataNasc: Sequelize.DATE,
+      datanasc: Sequelize.DATE,
       endereco: Sequelize.STRING,
-      cpf: Sequelize.INTEGER(11),
+      cpf: Sequelize.INTEGER,
       email: Sequelize.STRING,
-      telefone: Sequelize.INTEGER(11),
+      telefone: Sequelize.INTEGER,
       cargo: Sequelize.STRING,
     }, {
       sequelize,

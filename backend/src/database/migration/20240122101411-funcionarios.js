@@ -2,9 +2,8 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('funcionarios', {
-      idFunc: {
+      id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
@@ -13,7 +12,7 @@ module.exports = {
         allowNull: false,
 
       },
-      dataNasc: {
+      datanasc: {
         type: Sequelize.DATE,
       },
       endereco: {
@@ -33,11 +32,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      create_at: {
+      created_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      updateAt: {
+      updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
@@ -58,7 +57,7 @@ module.exports = {
 
       },
       dataNasc: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATE(3),
       },
       endereco: {
         type: Sequelize.STRING,
@@ -77,11 +76,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      create_at: {
+      created_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      updateAt: {
+      updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
