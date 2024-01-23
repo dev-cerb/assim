@@ -10,7 +10,6 @@ module.exports = {
       nome: {
         type: Sequelize.STRING,
         allowNull: false,
-
       },
       datanasc: {
         type: Sequelize.DATE,
@@ -19,15 +18,18 @@ module.exports = {
         type: Sequelize.STRING,
       },
       cpf: {
-        type: Sequelize.INTEGER(11),
+        type: Sequelize.STRING,
         allowNull: false,
         unique: true,
+        validate: {
+          is: (/^\d{3}.\d{3}.\d{3}-\d{2}$/),
+        },
       },
       email: {
         type: Sequelize.STRING,
       },
       telefone: {
-        type: Sequelize.INTEGER(11),
+        type: Sequelize.STRING,
       },
       cargo: {
         type: Sequelize.STRING,
@@ -57,22 +59,25 @@ module.exports = {
         allowNull: false,
 
       },
-      dataNasc: {
+      datanasc: {
         type: Sequelize.DATE(3),
       },
       endereco: {
         type: Sequelize.STRING,
       },
       cpf: {
-        type: Sequelize.INTEGER(11),
+        type: Sequelize.STRING,
         allowNull: false,
         unique: true,
+        validate: {
+          is: (/^\d{3}.\d{3}.\d{3}-\d{2}$/),
+        },
       },
       email: {
         type: Sequelize.STRING,
       },
       telefone: {
-        type: Sequelize.INTEGER(11),
+        type: Sequelize.STRING,
       },
       cargo: {
         type: Sequelize.STRING,

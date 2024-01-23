@@ -1,8 +1,13 @@
 import express from 'express';
-import homeController from '../controllers/HomeController';
+import funcionarioController from '../controllers/FuncionarioController';
+import cargoController from '../controllers/CargoController';
 
 const router = new express.Router();
 
-router.get('/', homeController.index);
+router.post('/', funcionarioController.create);
+router.get('/', funcionarioController.readAll);
+/*router.post('/', funcionarioController.index);
+router.get('/', cargoController.index);
+router.post('/', cargoController.index);*/
 
 export default router;

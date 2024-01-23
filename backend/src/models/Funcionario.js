@@ -1,4 +1,5 @@
 import Sequelize, { Model } from 'sequelize';
+import Cargo from './Cargo';
 
 export default class Funcionario extends Model {
   static init(sequelize) {
@@ -14,5 +15,9 @@ export default class Funcionario extends Model {
       sequelize,
     });
     return this;
+  }
+
+  static associations(models){
+    this.hasOne(models.Cargo, {foreignKey: 'cargo', as: 'cargos'});
   }
 }

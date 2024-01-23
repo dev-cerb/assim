@@ -2,14 +2,16 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('cargos', {
-      idcargo: {
+      idCargo: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
+        field: 'id_cargo',
       },
       cargo: {
         type: Sequelize.STRING,
         allowNull: false,
+        foreignKey: true,
       },
       salario: {
         type: Sequelize.FLOAT,
@@ -23,16 +25,18 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
+    },{
+      id:false,
     });
   },
 
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('cargos', {
-      idcargo: {
+      idCargo: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         autoIncrement: true,
         primaryKey: true,
+        field: 'id_cargo',
       },
       cargo: {
         type: Sequelize.STRING,
@@ -50,6 +54,8 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
+    },{
+      id:false,
     });
   },
 };
