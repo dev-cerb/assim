@@ -21,6 +21,7 @@ module.exports = {
       cpf: {
         type: Sequelize.INTEGER(11),
         allowNull: false,
+        unique: true,
       },
       email: {
         type: Sequelize.STRING,
@@ -65,6 +66,7 @@ module.exports = {
       cpf: {
         type: Sequelize.INTEGER(11),
         allowNull: false,
+        unique: true,
       },
       email: {
         type: Sequelize.STRING,
