@@ -7,7 +7,7 @@ const router = new express.Router();
 router.post('/', funcionarioController.create);
 router.get('/', funcionarioController.index);
 router.get('/:nome', funcionarioController.show);
-router.put('/:id/:cpf', funcionarioController.update);
+router.put('/:id', funcionarioController.update);
 router.delete('/:id', funcionarioController.delete);
 
 

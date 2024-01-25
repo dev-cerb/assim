@@ -1,4 +1,5 @@
 import Funcionario from '../models/Funcionario';
+import {Op} from 'sequelize';
 
 class FuncionarioController {
   async create(req, res) {
@@ -23,7 +24,11 @@ class FuncionarioController {
     try{
       const funcionario = await Funcionario.findAll({
         where: {
-            nome: req.params.nome,
+          [Op.or]:[
+            {nome: req.params.nome},
+            {cpf: req.params.cpf},
+          ]
+
         }
       });
       return res.json(funcionario);
