@@ -1,5 +1,4 @@
 import Sequelize, { Model } from 'sequelize';
-import Cargo from './Cargo';
 
 export default class Funcionario extends Model {
   static init(sequelize) {
@@ -8,7 +7,15 @@ export default class Funcionario extends Model {
       datanasc: Sequelize.DATE,
       endereco: Sequelize.STRING,
       cpf: Sequelize.INTEGER,
-      email: Sequelize.STRING,
+      email: {
+        type: Sequelize.STRING,
+        defaultValue: '',
+        validate: {
+          isEmail: {
+            msg: 'Email inválido',
+          }
+        }
+      },
       telefone: Sequelize.INTEGER,
       cargo: Sequelize.STRING,
     }, {
@@ -17,7 +24,5 @@ export default class Funcionario extends Model {
     return this;
   }
 
-  static associations(models){
-    this.hasOne(models.Cargo, {foreignKey: 'cargo', as: 'cargos'});
-  }
+
 }

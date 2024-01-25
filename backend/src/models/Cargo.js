@@ -1,5 +1,4 @@
 import Sequelize, { Model } from 'sequelize';
-import Funcionario from './Funcionario';
 
 export default class Cargo extends Model {
   static init(sequelize) {
@@ -7,13 +6,11 @@ export default class Cargo extends Model {
       idCargo: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
-        primaryKey: true,
         field: 'id_cargo',
       },
       cargo: {
         type: Sequelize.STRING,
-        foreignKey: true,
-        field: 'cargo',
+        primaryKey: true,
       },
       salario: Sequelize.FLOAT,
     }, {
@@ -23,7 +20,4 @@ export default class Cargo extends Model {
     return this;
   }
 
-  static associations(models){
-    this.belongsToMany(models.Funcionario, {foreignKey: 'cargo', as: 'funcionarios'});
-  }
 }

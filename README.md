@@ -12,4 +12,4 @@ Crie um arquivo '.env' dentro da **backend** que deverá ter as seguintes inform
 **DATABASE_USERNAME**= Usuário
 **DATABASE_PASSWORD**= Senha
 
-E abra o arquivo html na pagina **frontend**
+Acesse a pasta backend no terminal e execute o comando **npm run dev**
