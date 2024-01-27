@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+  --principal-color: #15C7EB;
+  --primary-color: #35A2B8;
+  --secondary-color: #417985;
+  --other-color: #384D52;
+}
+
+body{
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  background-color: var(--other-color);
+  width: 80%;
+  height: 70%;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.content header{
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  margin-top: 70px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--principal-color);
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.menu{
+  margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:30px;
+}
+
+.options{
+  background-color: var(--primary-color);
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.options a,
+.options p{
+  text-decoration: none;
+  color: var(--other-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+}
+
+.options:hover{
+  background-color: var(--secondary-color);
+  color: var(--principal-color);
+  cursor: pointer;
+}
+
+.hiddenOptions{
+  margin: auto;
+  width: 70%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.hiddenOptions--options{
+  margin-left: 160px;
+  background-color: var(--primary-color);
+  width: 280px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: var(--other-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+.hiddenOptions--options:hover{
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.hidden{
+  display: block;
+}

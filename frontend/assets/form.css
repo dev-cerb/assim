@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+  --principal-color: #15C7EB;
+  --primary-color: #35A2B8;
+  --secondary-color: #417985;
+  --other-color: #384D52;
+}
+
+body{
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  background-color: var(--other-color);
+  width: 80%;
+  height: 70%;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.content header{
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--principal-color);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+.content header{
+  height: 30%;
+}
+
+.forms{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label{
+  color: var(--primary-color);
+}
+
+input{
+  width: 300px;
+}
+
+button{
+  background-color: var(--secondary-color);
+  border: 0;
+  height: 23px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.cadastrar{
+  margin-top: 40px;
+  display: block;
+  flex-direction: column;
+  width: 300px;
+  margin-right: 100px;
+}
+
+.cadastrobutton{
+  margin-top: 10px;
+  width: 100px;
+}
+
+.excluir{
+  margin-top: 40px;
+  display: block;
+  flex-direction: column;
+}
+
+.excluir input{
+  width: 100px;
+}
+
+.alterar{
+  margin-top: 40px;
+  display: block;
+  flex-direction: column;
+  width: 300px;
+  margin-left: 100px;
+}
