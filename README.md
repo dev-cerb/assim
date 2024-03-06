@@ -2,7 +2,7 @@
 
 O projeto foi feito utilizando Javascript, Node.js , Express.js e Sequelize.<br>
 Obs:<br>
-O projeto não está totalmente completo. O front será mais trabalho e ainda deve haver o consumo da API.<br>
+O projeto não está totalmente completo. O front será melhor trabalhado e ainda deve haver o consumo da API.<br>
 A API foi testada utilizando o Insomnia e está funcionando normalmente.<br>
 
 ## Rodando localmente
